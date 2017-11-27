@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       showActive: '',
-      users: [],
+      users: '',
       temp_search: ''
 
     }
@@ -77,8 +77,8 @@ update_temp_search: function(updated_search) {
       this.showActive = 'is-active';
     },
     deleteUser(user) {
-      this.temp_search.splice(this.temp_search.indexOf(user), 1);
-      this.users = this.temp_search;
+      this.users.splice(this.users.indexOf(user), 1);
+      this.temp_search = this.users;
     },
     close() {
       this.showActive = ''

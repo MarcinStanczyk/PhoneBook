@@ -213,7 +213,7 @@ export default {
 		},
 
 		check_name(value){
-			if (value.length > 2)
+			if ((value.length > 2)  && (/^([a-zA-Zśąęćźżół]{2,})+$/.test(value)))
 			{
 				this.msg.name = '';
         this.validate.name = true;
@@ -224,7 +224,7 @@ export default {
       this.validate_test();
 		},
 		check_surname(value){
-			if (value.length > 2)
+			if ((value.length > 2)  && (/^([a-zA-Zśąęćźżół]{2,})+$/.test(value)))
 			{
 				this.msg.surname = '';
         this.validate.surname = true;
